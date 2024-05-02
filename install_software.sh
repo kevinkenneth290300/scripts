@@ -67,20 +67,17 @@ npm install
 
 echo " cypress Installation complete."
 
-# Install Spotify
-sudo snap install spotify
-
 # Install IntelliJ IDEA
 sudo snap install intellij-idea-ultimate --classic
 
 # Install SimpleScreenRecorder
-sudo apt install simplescreenrecorder -y
+sudo apt-get install simplescreenrecorder
 
 # Install Flameshot
-sudo apt install flameshot -y
+sudo apt-get install flameshot
 
 # Install Wireshark
-sudo apt install wireshark -y
+sudo apt-get install wireshark
 sudo usermod -aG wireshark $USER
 sudo chgrp $USER /usr/bin/dumpcap
 sudo chmod 750 /usr/bin/dumpcap
@@ -89,10 +86,10 @@ sudo chmod 750 /usr/bin/dumpcap
 wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | sudo apt-key add -
 echo "deb https://dbeaver.io/debs/dbeaver-ce /" | sudo tee /etc/apt/sources.list.d/dbeaver.list
 sudo apt update
-sudo apt install dbeaver-ce -y
+sudo apt-get install dbeaver-ce
 
 # Install VLC
-sudo apt install vlc -y
+sudo apt-get install vlc
 
 # Install WPS Office
 #wget -O wps-office.deb https://wdl1.pcfg.cache.wpscdn.com/wpsdl/wpsoffice/download/linux/10702/wps-office_11.1.0.10702.XA_amd64.deb
@@ -102,62 +99,7 @@ sudo apt install vlc -y
 # Install Whatsdesk
 sudo snap install whatsdesk
 
-# Install Gnome Shell Extensions
-#sudo apt install gnome-shell-extensions -y
-
-# Install GNOME Bluetooth quick connect extension
-#sudo apt install gnome-shell-extension-bluetooth-quick-connect -y
-
-# Install Clipboard Indicator
-#sudo apt install gnome-shell-extension-clipboard-indicator -y
-
-# Install Refresh Wi-Fi Connections
-#sudo apt install gnome-shell-extension-refresh-wifi -y
-
-# Install User Themes
-#sudo apt install gnom##e-shell-extension-user-theme -y
-
-# Install Oh My Zsh
-#sudo apt install zsh -y
-#sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# Install additional GNOME Extensions
-#sudo apt install gnome-tweaks -y
-#sudo apt install chrome-gnome-shell -y
-
-# Enable GNOME Extensions via the browser
-#google-chrome https://extensions.gnome.org/
-
 echo "Software installation complete."
-
-# Install codecs and multimedia libraries
-sudo apt install -y ubuntu-restricted-extras
-
-# Install Microsoft TrueType core fonts
-sudo apt install -y ttf-mscorefonts-installer
-
-# Accept the EULA for the Microsoft TrueType core fonts
-echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
-
-# Configure fontconfig to use the Microsoft TrueType core fonts
-sudo dpkg-reconfigure fontconfig-config
-
-# Install additional fonts
-sudo apt install -y fonts-ubuntu-font-family-console fonts-open-sans fonts-roboto fonts-dejavu-core
-
-# Install additional multimedia packages
-sudo apt install -y ffmpeg gstreamer1.0-libav gstreamer1.0-plugins-ugly gstreamer1.0-plugins-bad gstreamer1.0-plugins-good
-
-# Install additional utility packages
-#sudo apt install -y unzip p7zip-full
-
-# Clean up unused packages
-sudo apt autoremove -y
-
-# Clear the package cache
-sudo apt clean
-
-echo "codec , fonts and media Installation complete."
 
 # Update and upgrade system
 sudo apt update
